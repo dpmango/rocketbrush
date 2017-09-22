@@ -1,0 +1,17 @@
+.footer
+  .footer__wrapper
+    a(href='mailto:hello@rocketbrush.com').footer__email
+      +icon('ico-mail')
+      span hello@rocketbrush.com
+    
+    .footer__credits ROCKET BRUSH LTD, 28 shosse Neftyanikov St., 350051 Krasnodar, Russia
+      
+    .footer__faces
+      
+      - var faces = ['aleksei', 'alex', 'alyona', 'artem', 'daria', 'konstantin', 'pavel', 'sergei']
+        each face in faces
+          .footer-face
+            img(src='img/faces/'+face+'.png')
+      
+      a.footer-join(href='#')
+        +icon('ico-join')
