@@ -1,5 +1,7 @@
 // FOOTER
 .footer
+  position: relative
+  z-index: 2
   padding: 60px
   &__wrapper
     display: flex
@@ -48,7 +50,6 @@
 
 +r($hd)
   .footer
-    padding: 60px 40px
     &__wrapper
       flex-wrap: wrap
       justify-content: flex-start
@@ -64,6 +65,7 @@
 
 +r($desktop)
   .footer
+    padding: 60px 40px
     &__wrapper
       flex-direction: column
     &__email
@@ -80,6 +82,7 @@
       flex: 0 0 auto
       text-align: center
       margin: 20px 0 0 0
+      font-size: 15px
     &__faces
       order: 1
       margin-left: auto
