@@ -62,8 +62,11 @@
       letter-spacing: .132em
       font-weight: 800
       color: $colorPrimary
+      text-shadow: 0px 2px 0px rgba(white, .99), 0px 3px 0px rgba($colorPrimary, .13)
     &-sub
+      color: $colorMute
       font-size: 31px
+      text-shadow: 0px 2px 0px rgba(white, .99), 0px 3px 0px rgba($colorPrimary, .13)
   &__description
     margin-top: 6vh
     padding-top: 35px
@@ -71,6 +74,22 @@
     text-align-last: center
     font-size: 17px
     line-height: 1.2
+
++rh(1000)
+  .intro
+    margin-top: 0
+    &__description
+      margin-top: 0px
+
++rh(820)
+  .intro
+    padding-top: 30px
+
++rh(750)
+  .intro
+    &__logo
+      svg
+        max-height: 170px
 
 +r($mobile)
   .intro
