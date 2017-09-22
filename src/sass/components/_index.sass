@@ -64,63 +64,94 @@
   border-radius: 50%
   background: #262b35
   opacity: 0.2
+  animation-name: particleZoomIn
+  animation-duration: .4s
+  animation-timing-function: ease-in-out
+  animation-fill-mode: forwards
+  // animation-play-state: paused
+  transform: scale(0)
   &--1
     top: 25vh
     left: 20vw
+    animation-delay: 2s
   &--2
     top: 65vh
     left: 80vw
+    animation-delay: 2.2s
   &--3
     size: 13px
     top: 65vh
     left: 30vw
+    animation-delay: 2.3s
   &--4
     opacity: .08
     size: 13px
     top: 17vh
     left: 80vw
+    animation-delay: 2.4s
   &--4
     opacity: .08
     size: 13px
     top: 50vh
     left: 90vw
+    animation-delay: 2.5s
   &--5
     opacity: .08
     size: 13px
     top: 70vh
     left: 10vw
+    animation-delay: 2.4s
   &--6
     opacity: .08
     size: 13px
     top: 85vh
     left: 70vw
+    animation-delay: 2.3s
   &--7
     opacity: .08
     size: 13px
     top: 40vh
     left: 75vw
+    animation-delay: 2.5s
   &--8
     opacity: .08
     size: 7px
     top: 20vh
     left: 80vw
+    animation-delay: 2.5s
   &--9
     opacity: .08
     size: 7px
     top: 15vh
     left: 35vw
+    animation-delay: 2.6s
   &--10
     opacity: .08
     size: 7px
     top: 80vh
     left: 20vw
+    animation-delay: 2.7s
   &--11
     opacity: .08
     size: 7px
     top: 10vh
     left: 10vw
+    animation-delay: 2.7s
   &--12
     opacity: .08
     size: 7px
     top: 85vh
     left: 85vw
+    animation-delay: 2.8s
+
+.is-ready
+  .particle
+    // animation-play-state: running
+
+@keyframes particleZoomIn
+  0%
+    transform: scale(0)
+  60%
+    transform: scale(2)
+  100%
+    transform: scale(1)
