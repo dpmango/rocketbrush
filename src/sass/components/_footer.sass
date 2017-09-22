@@ -23,9 +23,30 @@
     text-align: center
 
   &__faces
+    position: relative
     margin-left: auto
     display: flex
     align-items: center
+
+.footer-face_desc
+  position: absolute
+  top: 50%
+  left: -200px
+  width: 200px
+  transform: translate3d(-30px,-50%,0)
+  opacity: 0
+  pointer-events: none
+  transition: all $transitionSpeed $ease
+  text-align: center
+  span
+    display: block
+    font-size: 15px
+    &:first-child
+      color: $colorPrimary
+      margin-bottom: 2px
+  &.is-active
+    transform: translate3d(0,-50%,0)
+    opacity: 1
 
 .footer-face, .footer-join
   display: flex
@@ -43,12 +64,12 @@
   img
     max-width: 100%
   &:hover
-    size: 50px
-    font-size: 50px
+    transform: scale(1.8)
+    z-index: 3
     color: $colorPrimary
 
 
-+r($hd)
++r(1700)
   .footer
     &__wrapper
       flex-wrap: wrap
@@ -65,7 +86,7 @@
 
 +r($desktop)
   .footer
-    padding: 60px 40px
+    padding: 100px 40px 40px 40px
     &__wrapper
       flex-direction: column
     &__email
@@ -74,6 +95,9 @@
       margin-left: auto
       margin-right: auto
       font-size: 20px
+      .ico
+        font-size: 26px
+        margin-left: 0
       span
         display: inline-block
         margin-left: 5px
@@ -87,3 +111,18 @@
       order: 1
       margin-left: auto
       margin-right: auto
+
+  .footer-face_desc
+    left: 50%
+    top: -60px
+    transform: translate3d(-50%,-25px,0)
+    &.is-active
+      transform: translate3d(-50%,0,0)
+
++r($mobile-s)
+  .footer
+    padding: 100px 20px 30px 20px
+
+  .footer-face, .footer-join
+    size: 28px
+    font-size: 28px

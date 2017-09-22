@@ -7,11 +7,13 @@
     .footer__credits.js-loader.js-loader--bottom ROCKET BRUSH LTD, 28 shosse Neftyanikov St., 350051 Krasnodar, Russia
       
     .footer__faces.js-loader.js-loader--right
-      
-      - var faces = ['aleksei', 'alex', 'alyona', 'artem', 'daria', 'konstantin', 'pavel', 'sergei']
-        each face in faces
-          .footer-face
-            img(src='img/'+face+'.png')
-      
-      a.footer-join(href='#')
+      - var faces = ['aleksei', 'alex', 'alyona', 'artem', 'daria', 'konstantin', 'pavel', 'sergei']     
+      each face, index in faces
+        .footer-face_desc(data-id=index+1)
+          span= face + ' Surname'
+          span Position  
+        .footer-face(data-id=index+1)
+          img(src='img/'+face+'.png')
+    
+      a.footer-join(href='mailto:hr@rocketbrush.com')
         +icon('ico-join')
