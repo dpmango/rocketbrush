@@ -1,4 +1,86 @@
 // FOOTER
 .footer
+  padding: 60px
   &__wrapper
-    
+    display: flex
+    justify-content: center
+    align-items: flex-end
+  &__email
+    font-size: 24px
+    margin-right: auto
+    transition: all $transitionSpeed $ease
+    .ico
+      font-size: 30px
+      margin-bottom: -6px
+      margin-left: -2px
+    span
+      display: block
+    &:hover
+      color: $colorBlue
+  &__credits
+    text-align: center
+
+  &__faces
+    margin-left: auto
+    display: flex
+    align-items: center
+
+.footer-face, .footer-join
+  display: flex
+  align-items: center
+  justify-content: center
+  position: relative
+  z-index: 2
+  size: 32px
+  font-size: 32px
+  overflow: hidden
+  border-radius: 50%
+  margin-right: 3px
+  cursor: pointer
+  transition: all $transitionSpeed $ease
+  img
+    max-width: 100%
+  &:hover
+    size: 50px
+    font-size: 50px
+    color: $colorPrimary
+
+
++r($hd)
+  .footer
+    padding: 60px 40px
+    &__wrapper
+      flex-wrap: wrap
+      justify-content: flex-start
+    &__email
+      order: 1
+    &__credits
+      flex: 0 1 100%
+      order: 3
+      text-align: left
+      margin-top: 20px
+    &__faces
+      order: 2
+
++r($desktop)
+  .footer
+    &__wrapper
+      flex-direction: column
+    &__email
+      order: 2
+      margin-top: 40px
+      margin-left: auto
+      margin-right: auto
+      font-size: 20px
+      span
+        display: inline-block
+        margin-left: 5px
+    &__credits
+      width: 100%
+      flex: 0 0 auto
+      text-align: center
+      margin: 20px 0 0 0
+    &__faces
+      order: 1
+      margin-left: auto
+      margin-right: auto

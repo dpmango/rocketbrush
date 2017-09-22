@@ -4,12 +4,14 @@
   position: absolute
   right: 55px
   top: 55px
-  font-size: 65px
+  font-size: 60px
   a
     transition: all $transitionSpeed $ease
     &:hover
       color: $colorBlue
+
 .intro
+  margin: auto
   &__wrapper
     display: flex
     flex-direction: column
@@ -18,8 +20,10 @@
     margin-right: auto
   &__logo
     text-align: center
-    font-size: 320px
+    svg
+      max-height: 220px
   &__heading
+    margin-top: 50px
     text-transform: uppercase
     &-main
       font-size: 43px
@@ -29,56 +33,7 @@
     &-sub
       font-size: 31px
   &__description
-    margin-top: auto
+    margin-top: 5vh
     padding-top: 35px
     text-align: justify
     font-size: 17px
-
-// FOOTER
-.footer
-  padding: 60px
-  &__wrapper
-    display: -webkit-flex
-    display: -ms-flex
-    display: flex
-    justify-content: center
-    align-items: flex-end
-  &__email
-    font-size: 24px
-    margin-right: auto
-    transition: all $transitionSpeed $ease
-    .ico
-      font-size: 30px
-      margin-bottom: -6px
-      margin-left: -2px
-    span
-      display: block
-    &:hover
-      color: $colorBlue
-  &__credits
-    text-align: center
-
-  &__faces
-    margin-left: auto
-    display: flex
-    align-items: center
-
-.footer-face, .footer-join
-  display: flex
-  align-items: center
-  justify-content: center
-  position: relative
-  z-index: 2
-  size: 32px
-  font-size: 32px
-  overflow: hidden
-  border-radius: 50%
-  margin-right: 3px
-  cursor: pointer
-  transition: all $transitionSpeed $ease
-  img
-    max-width: 100%
-  &:hover
-    size: 50px
-    font-size: 50px
-    color: $colorPrimary

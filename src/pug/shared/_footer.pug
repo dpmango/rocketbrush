@@ -1,12 +1,12 @@
 .footer
   .footer__wrapper
-    a(href='mailto:hello@rocketbrush.com').footer__email
+    a(href='mailto:hello@rocketbrush.com').footer__email.js-loader.js-loader--left
       +icon('ico-mail')
       span hello@rocketbrush.com
     
-    .footer__credits ROCKET BRUSH LTD, 28 shosse Neftyanikov St., 350051 Krasnodar, Russia
+    .footer__credits.js-loader.js-loader--bottom ROCKET BRUSH LTD, 28 shosse Neftyanikov St., 350051 Krasnodar, Russia
       
-    .footer__faces
+    .footer__faces.js-loader.js-loader--right
       
       - var faces = ['aleksei', 'alex', 'alyona', 'artem', 'daria', 'konstantin', 'pavel', 'sergei']
         each face in faces
