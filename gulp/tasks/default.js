@@ -18,10 +18,8 @@ gulp.task('build', function (callback) {
 // Watch
 gulp.task('watch',
   ['sass:watch',
-  'copy:watch',
   'pug:watch',
   'javascript:watch',
   'images:watch',
-  'sprite:svg:watch',
-  'sprite:png:watch',
+  'sprite:svg:watch'
 ]);

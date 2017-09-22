@@ -9,8 +9,8 @@ var config = require('../config');
 gulp.task('clean:dist', function() {
   return del.sync([
     config.dest.root + '/**/*',
-    '!' + config.dest.root + '/images',
-    '!' + config.dest.root + '/images/**/*'
+    '!' + config.dest.root + '/img',
+    '!' + config.dest.root + '/img/**/*'
   ]);
   // .then(function(paths) {
   //   util.log('Deleted:', util.colors.magenta(paths.join('\n')));

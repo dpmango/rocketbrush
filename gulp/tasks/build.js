@@ -23,8 +23,6 @@ function build(callback) {
     'javascript',
     'images',
     'sprite:svg',
-    'sprite:png',
-    'copy',
     callback
   );
 }

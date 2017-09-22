@@ -12,7 +12,7 @@ gulp.task('images', function(){
       '!' + config.src.img + '/svgo/**/*.*'
     ])
     .pipe(config.production ? cache(imagemin({interlaced: true})) : util.noop())
-    .pipe(gulp.dest(config.dest.img))
+    .pipe(gulp.dest(config.dest.root))
 });
 
 gulp.task('images:watch', function() {
