@@ -7,7 +7,7 @@ $(document).ready(function(){
 
   var scene = $('.js-scene').get(0)
 
-  // var parallax = new Parallax(scene);
+  var parallax = new Parallax(scene);
 
   $('.footer-face').hover(function(){
     // on
