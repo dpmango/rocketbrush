@@ -9,18 +9,18 @@ $(document).ready(function(){
 
   var parallax = new Parallax(scene);
 
-  $('.footer-face').hover(function(){
-    toggleFaceDesc( $(this).data('id') )
-  }, function(){
-    toggleFaceDesc( )
-  })
-
-  function toggleFaceDesc(el){
-    $('.footer-face_desc').removeClass('is-active')
-    if ( el ){
-      $('.footer-face_desc[data-id='+el+']').addClass('is-active')
-    }
-  }
+  // $('.footer-face').hover(function(){
+  //   toggleFaceDesc( $(this).data('id') )
+  // }, function(){
+  //   toggleFaceDesc( )
+  // })
+  //
+  // function toggleFaceDesc(el){
+  //   $('.footer-face_desc').removeClass('is-active')
+  //   if ( el ){
+  //     $('.footer-face_desc[data-id='+el+']').addClass('is-active')
+  //   }
+  // }
 });
 
 $(window).on('load', function(){

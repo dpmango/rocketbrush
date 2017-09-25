@@ -35,11 +35,20 @@
 
 +r($mobile)
   .social
-    top: 25px
-    right: 25px
-    font-size: 50px
+    top: 0
+    right: 0
+    font-size: 35px
+    background: $colorBlue
     a
-      size: 50px
+      size: 35px
+      &::before
+        position: absolute 1px
+        border: 16.5px solid white
+    &:hover
+      a
+        &::before
+          opacity: 1
+          position: absolute 1px
 
 
 .intro
@@ -116,35 +125,43 @@
     &__description
       font-size: 16px
 
+// +r($mobile)
+//   .intro
+//     padding-top: 80px
+//     &__wrapper
+//       max-width: 350px
+//     &__logo
+//       svg
+//         max-height: 150px
+//     &__heading
+//       &-main
+//         font-size: 37px
+//         letter-spacing: .11em
+//       &-sub
+//         font-size: 26px
+//     &__description
+//       font-size: 15px
+
 +r($mobile)
   .intro
-    padding-top: 80px
-    &__wrapper
-      max-width: 350px
-    &__logo
-      svg
-        max-height: 150px
-    &__heading
-      &-main
-        font-size: 37px
-        letter-spacing: .11em
-      &-sub
-        font-size: 26px
-    &__description
-      font-size: 15px
-
-+r($mobile-s)
-  .intro
+    padding-top: 70px
     padding-left: 20px
     padding-right: 20px
     &__wrapper
-      max-width: 280px
+      max-width: 225px
+    &__logo
+      svg
+        max-height: 125px
     &__heading
+      margin-top: 30px
       &-main
-        font-size: 30px
+        font-size: 24px
         letter-spacing: .1em
       &-sub
-        font-size: 21px
+        font-size: 17px
+    &__description
+      padding-top: 25px
+      font-size: 12.5px
 
 .particles
   position: absolute 0
@@ -254,3 +271,7 @@
 +r($hd)
   .particle
     animation-name: particleZoomIn2
+
++r($mobile)
+  .particle
+    display: none
