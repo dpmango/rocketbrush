@@ -9,18 +9,26 @@
   perspective: 60px
   transform-style: preserve-3d
   a
+    position: relative
     display: block
     size: 60px
     border-radius: 50%
     color: $colorBlue
-    transition: transform .4s $ease
+    &::before
+      display: inline-block
+      content: ' '
+      position: absolute 1px
+      z-index: -1
+      border-radius: 50%
+      border: 6px solid #d4d5d7
   &:hover
     a
-      transform: rotateY(360deg)
-      transition: box-shadow .2s .2s ease
-      box-shadow: -10px 10px 0px rgba($fontColor, .2)
+      &::before
+        position: absolute -12px
+        opacity: 0
+        transition: all 1s ease
 
-+r($desktop)
++r($hd)
   .social
     top: 40px
     right: 40px
@@ -77,25 +85,36 @@
 
 +rh(1000)
   .intro
-    margin-top: 0
+    padding-top: 40px
+    margin-top: 40px
     &__description
       margin-top: 0px
 
-+rh(820)
++rh(850)
   .intro
-    padding-top: 30px
+    margin-top: 25px
+    &__wrapper
+      transform: scale(.91)
 
 +rh(750)
   .intro
+    margin-top: 0
     &__logo
       svg
         max-height: 170px
+
++rh(710)
+  .intro
+    &__wrapper
+      transform: scale(1)
+
 
 +r($mobile)
   .intro
     padding-top: 80px
     &__wrapper
       max-width: 350px
+      transform: scale(1)
     &__logo
       svg
         max-height: 150px
@@ -218,3 +237,15 @@
     transform: scale(2)
   100%
     transform: scale(1)
+
+@keyframes particleZoomIn2
+  0%
+    transform: scale(0)
+  60%
+    transform: scale(1.5)
+  100%
+    transform: scale(0.7)
+
++r($hd)
+  .particle
+    animation-name: particleZoomIn2

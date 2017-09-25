@@ -4,10 +4,10 @@
       +icon('ico-mail')
       span hello@rocketbrush.com
     
-    .footer__credits.js-loader.js-loader--bottom ROCKET BRUSH LTD, 28 shosse Neftyanikov St., 350051 Krasnodar, Russia
+    .footer__credits.js-loader.js-loader--bottom ROCKET BRUSH LTD,<br> 28 shosse Neftyanikov St., 350051 Krasnodar, Russia
       
     .footer__faces.js-loader.js-loader--right
-      - var faces = ['alex', 'artem', 'daria', 'konstantin', 'pavel', 'sergei', 'alyona']     
+      - var faces = ['alex', 'artem', 'daria', 'konstantin', 'pavel', 'sergei', 'alyona', 'aleksei']     
       each face, index in faces
         .footer-face_desc(data-id=index+1)
           span= face + ' Surname'
@@ -15,5 +15,5 @@
         .footer-face(data-id=index+1)
           img(src='img/'+face+'.png')
     
-      a.footer-join(href='mailto:hr@rocketbrush.com')
-        +icon('ico-join')
+      //- a.footer-join(href='mailto:hr@rocketbrush.com')
+      //-   +icon('ico-join')

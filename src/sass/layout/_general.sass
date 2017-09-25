@@ -28,8 +28,18 @@ body, html
 .page
   display: flex
   flex-direction: column
-  min-height: 100vh
+  height: 100vh
   &__content
     display: flex
     flex-direction: column
     flex: 1 1 auto
+
++rh(710)
+  .page
+    height: auto
+    min-height: 100vh
+
++r($wide)
+  .page
+    height: auto
+    min-height: 100vh
