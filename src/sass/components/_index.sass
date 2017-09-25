@@ -93,8 +93,7 @@
 +rh(850)
   .intro
     margin-top: 25px
-    &__wrapper
-      transform: scale(.91)
+
 
 +rh(750)
   .intro
@@ -103,24 +102,30 @@
       svg
         max-height: 170px
 
-+rh(710)
++r($hd)
   .intro
     &__wrapper
-      transform: scale(1)
-
+      max-width: 375px
+    &__heading
+      &-main
+        width: auto
+        font-size: 40px
+        letter-spacing: .102em
+      &-sub
+        font-size: 28px
+    &__description
+      font-size: 16px
 
 +r($mobile)
   .intro
     padding-top: 80px
     &__wrapper
       max-width: 350px
-      transform: scale(1)
     &__logo
       svg
         max-height: 150px
     &__heading
       &-main
-        width: auto
         font-size: 37px
         letter-spacing: .11em
       &-sub
