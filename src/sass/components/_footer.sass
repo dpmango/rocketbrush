@@ -148,7 +148,7 @@
       display: flex
       align-items: center
       justify-content: center
-      padding: 12px
+      padding: 9px
       margin-top: 65px
       span
         display: inline-block
@@ -157,12 +157,13 @@
         margin: 0
         font-size: 20px
     &__credits
-      width: 100%
       flex: 0 0 auto
       text-align: center
       font-size: 9px
-      width: 100%
-      margin: 25px 0 0 0
+      width: calc(100% + 10px)
+      margin: 25px -5px 0 -5px
+      br:nth-child(2)
+        display: none
     &__faces
       order: 1
       margin-left: auto
